@@ -15,6 +15,12 @@
     <title>Frontend Mentor | Article preview component</title>
 
     <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
       rel="stylesheet"
     />
@@ -32,7 +38,7 @@
         font-weight: 700;
       }
       .article-image {
-        height: auto;
+        height: 100%;
         width: 100%;
       }
       .attribution {
@@ -49,34 +55,38 @@
         -webkit-box-shadow: 8px 10px 30px -8px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 8px 10px 30px -8px rgba(0, 0, 0, 0.3);
         box-shadow: 8px 10px 30px -8px rgba(0, 0, 0, 0.3);
-        display: flex;
+        /* max-width: 540px; */
+        /* display: flex;
         height: 40vh;
-        margin: auto;
-        overflow: hidden;
+        margin: auto; */
       }
     </style>
   </head>
   <body>
     <article class="card">
-      <section class="image-container">
-        <img src="./images/drawers.jpg" class="article-image" />
-      </section>
-      <article class="card-details">
-        <h1>
-          Shift the overall look and feel by adding these wonderful touches to
-          furniture in your home
-        </h1>
-        <p>
-          Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I've got some simple tips to help
-          you make any room feel complete.
-        </p>
-        <section>
-          <img src="/images/avatar-michelle.jpg" />
-          <h3>Michelle Appleton</h3>
-          <img src="images/icon-share.svg" />
-        </section>
-      </article>
+      <div class="row no-gutter">
+        <div class="col-md-4">
+          <img src="./images/drawers.jpg" class="article-image card-img-left" />
+        </div>
+        <div class="col-md-8">
+          <article class="card-body">
+            <h1>
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I've got some simple tips to
+              help you make any room feel complete.
+            </p>
+            <section>
+              <img src="/images/avatar-michelle.jpg" />
+              <h3>Michelle Appleton</h3>
+              <img src="images/icon-share.svg" />
+            </section>
+          </article>
+        </div>
+      </div>
     </article>
     <div class="attribution">
       Challenge by
@@ -85,5 +95,21 @@
       >. Coded by
       <a href="https://github.com/ChrisMera" target="_blank">Chris Mera</a>.
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
