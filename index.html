@@ -31,10 +31,12 @@
       }
       body {
         background: hsl(210, 46%, 95%);
-        font-family: "Manrope", sans-serif;
+
         min-height: 100%;
+        font-size: 13px;
       }
       h1 {
+        font-family: Manrope, sans-serif;
         font-weight: 700;
       }
       .article-image {
@@ -55,25 +57,86 @@
         -webkit-box-shadow: 8px 10px 30px -8px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 8px 10px 30px -8px rgba(0, 0, 0, 0.3);
         box-shadow: 8px 10px 30px -8px rgba(0, 0, 0, 0.3);
+        height: 400px;
         /* max-width: 540px; */
         /* display: flex;
         height: 40vh;
         margin: auto; */
+        /* overflow: hidden; */
+      }
+      .container {
+        margin-top: 200px;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr 1.5fr;
+      }
+      .left-item {
+        border: 1px solid red;
+      }
+      .right-item {
+        border: 1px solid blue;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 100px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "header"
+          "main"
+          "footer"
+
+        ;
+      }
+      .content--title {
+        grid-area: header;
+      }
+      .content--main {
+        grid-area: main;
+      }
+      .content--footer {
+        grid-area: footer;
+      }
+
+
+      .img-wrapper {
+        width: 40%;
       }
     </style>
   </head>
   <body>
-    <article class="card">
-      <div class="row no-gutter">
-        <div class="col-md-4">
-          <img src="./images/drawers.jpg" class="article-image card-img-left" />
+    <div class="container">
+      <div class="left-item">
+        <img src="./images/drawers.jpg" class="img-fluid rounded-left" />
+      </div>
+      <div class="right-item"> 
+        <div class="content">
+          <div class="content--title">
+            Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+          </div>
+          <div class="content--main">
+            Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I've got some simple tips to
+              help you make any room feel complete.
+          </div>
+          <div class="content--footer">
+            <div class="author-image">
+
+            </div>
+          </div>
         </div>
-        <div class="col-md-8">
+      </div>
+      <!-- <article class="card">
+        <div class="row no-gutter">
+          <div class="img-wrapper">
+            
+          </div>
           <article class="card-body">
-            <h1>
+            <h2>
               Shift the overall look and feel by adding these wonderful touches
               to furniture in your home
-            </h1>
+            </h2>
             <p>
               Ever been in a room and felt like something was missing? Perhaps
               it felt slightly bare and uninviting. I've got some simple tips to
@@ -86,8 +149,8 @@
             </section>
           </article>
         </div>
-      </div>
-    </article>
+      </article> -->
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -106,10 +169,10 @@
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
       crossorigin="anonymous"
     ></script>
-    <script
+    <!-- <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
   </body>
 </html>
